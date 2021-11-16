@@ -7,6 +7,8 @@ for ($i = 0; $i < $n; $i++)
     preg_match('/[^\d]/', $expression, $operator);
     $operator = $operator[0];
     [$n1, $n2] = explode($operator, $expression);
+    $n1 = (string)(int)$n1;
+    $n2 = (string)(int)$n2;
     switch ($operator)
     {
         case '+':
